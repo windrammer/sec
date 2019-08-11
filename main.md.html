@@ -1,0 +1,87 @@
+<meta charset="utf-8">
+
+**Staying safe(er) on the internet for beginners**
+
+A handy guide to keeping yourself and your friends safe on the internet.
+
+This is intended as a quick guide to improving your safety and privacy on the internet. It's not by any means a list of best practices but what I use on a daily basis and encourage you to do as well.
+
+If you have any questions or suggestions, shoot me a message on either telegram https://t.me/windrammer , facebook https://www.facebook.com/toolmane or regular email at mail@toll.is
+
+
+
+Who am I and why did I write this guide?
+===============================================================================
+My name is David and I work as a DevOps engineer at a global fintech company. I write automation, manage infrastructure and have been a linux sysadmin for the better part of a decade. Many times have I spoken (more like rambling) to my friends about the importance of staying safe and be mindful about your presence on the internet and what one can do to improve this. It occurred to me that it might be easier if I put this down in text instead of taking it verbally over a beer. So here we are.
+
+
+The essentials.
+===============================================================================
+Use a password manager and unique passwords.
+
+It does not really matter which one you use, as long as you use one that is not a notebook in your desk or postits on your screen.
+I use lastpass https://www.lastpass.com/ for this, but if I were to look at alternatives today I would probably go with 1password https://1password.com/
+They have neat apps that you can have on all your computers and phones and nice browser extensions that fills in all your passwords for you when you go to a website that requires login.
+
+They also support multi factor authentication, which i strongly recommend for your password manager, I will talk more about this further down.
+
+
+Why is this important?
+-------------------------------------------------------------------------------
+Password reuse is a problem because if one website gets hacked, all your accounts are compromised.
+
+Relevant xkcd:
+https://xkcd.com/2176/
+
+"But I have nothing to hide. They can read all my facebook messages all they want"
+
+That might be true, but you also have friends. Ponder the idea that you get a message from one of your close friends saying they need money, you would probably help out. If that friend also says that they changed phone numbers, then larms should go off but it just might not and you send your swish to some scammer. It's a bit of a stretch but it just might happen.
+
+Another scenario could look like this, if you use the same password on everything:
+Say facebook is breached and your password leaks. To log in to facebook you need an email address and your password. If you have used the same password for this, they have access to your mail. If you also use e.g. paypal, they also have access to your paypal account. They could easily log in to your paypal account, change the delivery address, verify the change as they have your email and order a bunch of stuff for themselves. This can be a bit of a hassle to untangle as well, as they might change the passwords and you might have written "lol" in the recovery question field.
+
+
+
+The rest.
+===============================================================================
+I have divided this section into two groups, security and privacy.
+This is because they are quite different, security is important because I don't like my or my friends stuff stolen. Privacy is because I have a fashionable tin foil hat and I don't want my data being harvested and sold and I prefer to keep my data in as few hands as possible.
+
+I will try to divide this into sections with two levels of techiness and it's gonna get pretty deep pretty fast.
+
+Some of these things assume you are using firefox. I wholheartedly support mozilla (the makers of firefox) and what they are doing to keep the internet safe and improve privacy. If you are interested in exacly what they are doing, you can visit the mozilla website at: https://www.mozilla.org/en-US/about
+
+Security
+-------------------------------------------------------------------------------
+**Easy:**
+- Use multi factor authentication whenever possible.
+
+This is to put a physical limit on your digital accounts. Mobilt BankID is a good example of MFA.
+As bankid is not available for services outside of sweden, I use google authenticator for this.
+
+When logging in, if you have this enabled, you will be prompted for a code that you get from your authenticator which refreshes every 30 seconds. This requires you to have your phone with you if you are to log in someplace but in this day and age our phones are about one or two generations away from getting physically stuck to our hands so it should not be a huge problem.
+
+- Register at https://www.mozilla.org/en-US/firefox/accounts/ and add your email addresses in monitor.
+
+This will give you a heads up if a site containing your mail address was breached.
+
+**A bit more advanced:**
+
+- Enable DNS-over-HTTPS (DoH)
+In short, this is to encrypt traffic between your computer and the DNS servers. DNS is easiest explained as the road signs of the internet. When you type a url in the address bar, DNS is the protocol that tells your browser where that url is living so you can go there.
+You can read a bit more about this at https://www.zdnet.com/article/how-to-enable-dns-over-https-doh-in-firefox/
+
+There are also good step by step instructions on how to enable it in that article. 
+
+
+
+
+Privacy
+-------------------------------------------------------------------------------
+
+
+
+<!-- Markdeep: --><style class="fallback">body{visibility:hidden;white-space:pre;font-family:monospace}</style><script src="markdeep.min.js"></script><script src="https://casual-effects.com/markdeep/latest/markdeep.min.js"></script><script>window.alreadyProcessedMarkdeep||(document.body.style.visibility="visible")</script>
+
+
+
