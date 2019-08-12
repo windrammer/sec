@@ -15,7 +15,7 @@ Who am I and why did I write this guide?
 My name is David and I work as a DevOps engineer at a global fintech company. I write automation, manage infrastructure and have been a linux sysadmin for the better part of a decade. Many times have I spoken (more like rambling) to my friends about the importance of staying safe and be mindful about your presence on the internet and what one can do to improve this. It occurred to me that it might be easier if I put this down in text instead of taking it verbally over a beer. So here we are.
 
 
-The essentials.
+First step.
 ===============================================================================
 Use a password manager and unique passwords.
 
@@ -38,11 +38,11 @@ https://xkcd.com/2176/
 That might be true, but you also have friends. Ponder the idea that you get a message from one of your close friends saying they need money, you would probably help out. If that friend also says that they changed phone numbers, then larms should go off but it just might not and you send your swish to some scammer. It's a bit of a stretch but it just might happen.
 
 Another scenario could look like this, if you use the same password on everything:
-Say facebook is breached and your password leaks. To log in to facebook you need an email address and your password. If you have used the same password for this, they have access to your mail. If you also use e.g. paypal, they also have access to your paypal account. They could easily log in to your paypal account, change the delivery address, verify the change as they have your email and order a bunch of stuff for themselves. This can be a bit of a hassle to untangle as well, as they might change the passwords and you might have written "lol" in the recovery question field.
+Say facebook is breached and your password leaks. To log in to facebook you need an email address and your password. If you have used the same password for this, they have access to your mail. If you also use e.g. paypal, they also have access to your paypal account. They could easily log in to your paypal account, change the delivery address, verify the change as they have your email and order a bunch of stuff for themselves. This can be a bit of a hassle to untangle as well, as they might change the passwords and you might have written "lol" in the recovery question field and the phone number that you added to your account has not been in use since four years back.
 
 
 
-The rest.
+All other steps.
 ===============================================================================
 I have divided this section into two groups, security and privacy.
 This is because they are quite different, security is important because I don't like my or my friends stuff stolen. Privacy is because I have a fashionable tin foil hat and I don't want my data being harvested and sold and I prefer to keep my data in as few hands as possible.
@@ -54,6 +54,7 @@ Some of these things assume you are using firefox. I wholheartedly support mozil
 Security
 -------------------------------------------------------------------------------
 **Easy:**
+
 - Use multi factor authentication whenever possible.
 
 This is to put a physical limit on your digital accounts. Mobilt BankID is a good example of MFA.
@@ -63,7 +64,8 @@ When logging in, if you have this enabled, you will be prompted for a code that 
 
 - Register at https://www.mozilla.org/en-US/firefox/accounts/ and add your email addresses in monitor.
 
-This will give you a heads up if a site containing your mail address was breached.
+This will give you a heads up if a site containing your mail address has been breached.
+
 
 **A bit more advanced:**
 
@@ -71,13 +73,65 @@ This will give you a heads up if a site containing your mail address was breache
 In short, this is to encrypt traffic between your computer and the DNS servers. DNS is easiest explained as the road signs of the internet. When you type a url in the address bar, DNS is the protocol that tells your browser where that url is living so you can go there.
 You can read a bit more about this at https://www.zdnet.com/article/how-to-enable-dns-over-https-doh-in-firefox/
 
-There are also good step by step instructions on how to enable it in that article. 
+There are also good step by step instructions on how to enable it in that article.
 
 
 
 
 Privacy
 -------------------------------------------------------------------------------
+
+This part is a bit more work intensive in the beginning but once set up, there's nothing to it at all.
+
+First, we need to know why privacy is important. Somebody that is way better than me at explaining wrote this: https://us.norton.com/internetsecurity-privacy-why-your-online-privacy-matters.html
+
+I would recommend to read the "What Can Be Done With My Data?" and "Why Is Privacy Important?" parts, it's like a two minute read.
+
+tl;dr is basically that companies and authorities can do shady stuff with your data and that's bad.
+
+
+**So what can we do to improve privacy?**
+
+Be mindful about your browsing habits. Think about what you post on social media. Check privacy settings on apps (remember that your phone is a computer as well), e.g. ask yourself why your favorite image sharing app needs access to your contacts.
+
+
+Use an ad blocker.
+I use uBlock. It blocks ads and works pretty good. This is more of a convenience than anything else. It won't stop the collection of your data but it might save you some sanity in this environment.
+
+
+Stop using google for online searches.
+Google is indexing searches to improve them. This is a problem because that means that all you searches are saved and analyzed by the engineers at google. Also, as they have a huge ecosystem of online products so the amount of data they can gather from you is huge. I use https://duckduckgo.com/ for my searches.
+
+
+Install the addon DuckDuckGo Privacy Essentials.
+This addon helps to block the tracking cookies pushed by different websites. You can also click the icon in your browser to see exactly how much any given website is putting on your computer and grades the sites privacy practices. Play around with it and read their reports if you like.
+
+
+Also, we can use more advanced addons in firefox.
+
+**This is the techy bit.**
+
+First, a word on cookies and why the following things might help. You might have read the word cookies as you have to accept cookies on every website that you visit.
+They are responsible for keeping you logged in to websites and such. They also track where you have been. They are the things responsible for ad targeting. You know when you looked up those shoes and all of a sudden your facebook feed is all shoes in similar styles and colors? Cookies did that.
+
+
+I use container addons to separate my browsing. Containers are basically what they sound like. It's a box that you can put e.g. facebook in and you can create another one for different sites. That means that the tracking cookies from your shopping does not affect your facebooking and vice versa.
+
+
+I use two addons for this.
+One is called Firefox Multi-account Containers. With this you can create containers that always open when you go to any given site. I have facebook in a separate container, reddit in a separate container, all workrelated stuff in another and so on. These containers are persistent so I don't need to login every time. To add a site to a container, just open the container from the addon, go to the website you wish to add to it, click the icon in the browser and mark the checkbox "Always open in this container" and that's it. It will automatically open in that container from now on.
+
+I also use the extension Temporary Containers for the rest. These containers are for weird searches and general browsing. These containers get thrashed when I close the tab and all the associated cookies with it.
+
+
+
+Afterword.
+-------------------------------------------------------------------------------
+
+This is a shortish intro to what you can do to improve your browsing habits and let the tech assist in this. It is by no means a best practice guide or all that can be done. I have for example left out VPNs, physical MFA devices such as yubikeys, digital keys such SSH and GPG keys because I think they have quite a threshold to get into and only adds marginally to the security if all of the above is used.
+
+
+If this has helped you or inspired you in any way, please consider donating a dollar or two to either Electronic Frontier Foundation https://www.eff.org/ or the Mozilla foundation https://foundation.mozilla.org/
 
 
 
